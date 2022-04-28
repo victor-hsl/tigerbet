@@ -5,21 +5,25 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import "bootstrap-icons/font/bootstrap-icons.css"
 import {Header} from './template/header'
 import CardRow from './template/cardrow'
-import { useEffect, useState } from 'react';
+import LeaguesList from './template/leagueslist'
+import Content from './template/content'
+import { useEffect, useState } from 'react'
+
 function App() {
   const [cardList, setCardList] = useState<number[]>([]);
   useEffect(()=>{
-    let list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    setCardList(list);
+    let listOfCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    setCardList(listOfCards);
   }, []);
 
   return (
     <div className="App">
       <Header/>
-      <CardRow list={cardList}/>
-      <div className="btn btn-warning col-sm-12">
-        ...
-      </div>
+      <CardRow listOfCards={cardList}/>
+      <div className="d-flex flex-wrap">
+        <LeaguesList/>
+        <Content/>
+      </div>      
     </div>
   );
 }

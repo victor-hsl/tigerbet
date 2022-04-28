@@ -2,9 +2,9 @@ import { useState } from 'react'
 import Card from '../../components/card'
 import * as C from './styles'
 type Props = {
-    list: number[];
+    listOfCards: number[];
 }
-const CardRow = ({list}: Props) => {
+const CardRow = ({listOfCards}: Props) => {
     const [scrollx, setScrollx] = useState(0);
     const handleLeft = () =>{
         let x = scrollx + Math.round(window.innerWidth / 2);
@@ -15,7 +15,7 @@ const CardRow = ({list}: Props) => {
     }
     const handleRight = () =>{
         let x = scrollx - Math.round(window.innerWidth / 2);
-        let listW = list.length * 400;
+        let listW = listOfCards.length * 350;
         if((window.innerWidth - listW) > x){
             x = (window.innerWidth - listW) - 60;
         }
@@ -32,7 +32,7 @@ const CardRow = ({list}: Props) => {
             </C.Right>
             <C.CardArea>
                 <C.CardList margemEsq={scrollx} largura={4000} >
-                    {list.length > 0 && list.map((item, key)=>(
+                    {listOfCards.length > 0 && listOfCards.map((item, key)=>(
                         <Card content={item}/>
                     ))}
                 </C.CardList>

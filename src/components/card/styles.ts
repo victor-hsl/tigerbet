@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const Card = styled.div`
     display: inline-block;
     background-color: #f5f5f5;
-    height: 250px;
-        width: 400px;
+    height: 200px;
+    width: 350px;
 `;
 
 export const CardBody = styled.div`
