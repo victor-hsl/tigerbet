@@ -7,3 +7,12 @@
 .laranja{
     background-color: #e65926;
 }
+
+.link{
+    text-decoration: none;
+    color: rgba(255,255,255,.55);
+}
+
+.link:hover {
+    color: #fff;
+}

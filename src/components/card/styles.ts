@@ -18,6 +18,7 @@ export const CardBody = styled.div`
     transform: scale(0.9);
     transition: all ease 0.3s;
     position: relative;
+    cursor: pointer;
     :hover{
         transform: scale(1);
     }
