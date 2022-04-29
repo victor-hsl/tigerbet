@@ -8,7 +8,8 @@ import UpNext from './pages/content/upnext'
 export default function mainRoutes(){
     return(
         <Routes>
-            <Route path='/' element={<Live/>}/>
+            <Route path='/' element={<LaLigaTable/>}/>
+            <Route path='/live' element={<Live/>}/>
             <Route path='/laligatable' element={<LaLigaTable/>}/>
             <Route path='/register' element={<Register/>}/>
             <Route path='/upnext' element={<UpNext/>}/>            

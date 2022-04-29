@@ -1,5 +1,6 @@
 import TableItem from '../tableitem'
 import {TableRow} from '../../types/TableRow'
+import './styles.css'
 type Props = {
     content: TableRow[];
 }
@@ -7,8 +8,8 @@ const Table = ({content}: Props) => {
     return(
         <table className="table table-striped table-hover justify-content-center">
             <thead>
-                <tr>
-                    <th scope="col">#</th>
+                <tr >
+                    <th scope="col" className="td">#</th>
                     <th scope="col">Clube</th>
                     <th scope="col">Pts</th>
                     <th scope="col">V</th>

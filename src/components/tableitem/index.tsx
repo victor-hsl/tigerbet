@@ -6,7 +6,7 @@ type Props = {
 const TableItem = ({data}: Props) => {
     return(
         <tr className="item">
-            <th scope="row">{data.position}</th>
+            <th scope="row" className="td">{data.position}</th>
             <td><img src={data.icon} width="25px" height="25px"/> {data.team}</td>
             <td>{data.points}</td>
             <td>{data.wins}</td>
