@@ -7,12 +7,16 @@ import {Header} from './template/header'
 import CardRow from './template/cardrow'
 import LeaguesList from './template/leagueslist'
 import Content from './template/content'
+import Aside from './template/aside'
+import Checkout from './template/checkout'
 import { useEffect, useState } from 'react'
+import {matches} from './data/matches'
+import {Match} from './types/Match'
 
 function App() {
-  const [cardList, setCardList] = useState<number[]>([]);
+  const [cardList, setCardList] = useState<Match[]>([]);
   useEffect(()=>{
-    let listOfCards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let listOfCards = matches;
     setCardList(listOfCards);
   }, []);
 
@@ -20,10 +24,11 @@ function App() {
     <div className="App">
       <Header/>
       <CardRow listOfCards={cardList}/>
-      <div className="d-flex flex-wrap">
-        <LeaguesList/>
+      <div className="col-12 d-flex flex-wrap px-md-1 justify-content-between">
+        <Aside/>
         <Content/>
-      </div>      
+        <Checkout/>
+      </div>
     </div>
   );
 }

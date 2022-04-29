@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import fundo from '../../assets/fundocard.png'
 export const Card = styled.div`
     display: inline-block;
     background-color: #f5f5f5;
@@ -17,9 +17,35 @@ export const CardBody = styled.div`
     height: 100%;
     transform: scale(0.9);
     transition: all ease 0.3s;
-
-
+    position: relative;
     :hover{
         transform: scale(1);
     }
+
+    .background{
+        position: absolute;
+        z-index: -1;
+        opacity: 0.15;
+        top: 0;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
 `;
+
+export const CardContent = styled.div`
+    height: 100px;
+    font-family: sans-serif;
+    font-size: 20px;
+`;
+
+export const CardFooter = styled.div`
+    height: 45px;
+    font-family: sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const Hr = styled.hr`
+`

@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import Card from '../../components/card'
 import * as C from './styles'
+import {Match} from '../../types/Match'
 type Props = {
-    listOfCards: number[];
+    listOfCards: Match[];
 }
 const CardRow = ({listOfCards}: Props) => {
     const [scrollx, setScrollx] = useState(0);
@@ -33,7 +34,16 @@ const CardRow = ({listOfCards}: Props) => {
             <C.CardArea>
                 <C.CardList margemEsq={scrollx} largura={4000} >
                     {listOfCards.length > 0 && listOfCards.map((item, key)=>(
-                        <Card content={item}/>
+                        <Card 
+                            teamA={item.teamA} 
+                            teamALogo={item.teamALogo}
+                            teamB={item.teamB}
+                            teamBLogo={item.teamBLogo}
+                            league={item.league}
+                            diaSemana={item.diaSemana}
+                            hora={item.hora}
+                            data={item.data}
+                        />
                     ))}
                 </C.CardList>
             </C.CardArea>
