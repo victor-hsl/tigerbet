@@ -12,7 +12,7 @@ export const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link><Link to='/' className="link">Ao Vivo</Link></Nav.Link>
+                        <Nav.Link><Link to='/live' className="link">Ao Vivo</Link></Nav.Link>
                         <Nav.Link><Link to='/upnext' className="link">A Seguir</Link></Nav.Link>
                     </Nav>
                     <Nav>

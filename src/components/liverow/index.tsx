@@ -6,6 +6,7 @@ type Props = {
 const LiveRow = ({content}: Props) =>{
     return(
         <div>
+            <hr/>
             <C.Live className="mx-1 d-flex justify-content-around align-items-center display-6">
                 <div>
                     <img src={content.matchInfo.teamALogo} width="60px" height="60px"/>
@@ -30,7 +31,15 @@ const LiveRow = ({content}: Props) =>{
                 </div>
             </C.Live> 
             <hr/> 
-            <div></div>
+            <div className="d-flex justify-content-center align-items-center">
+                <div className="display-5">
+                    {content.time}
+                </div>
+                <div className="ms-2 btn btn-outline-danger rounded-circle align-items-center justify-content-center">
+                    <i className="bi bi-record-circle"></i>
+                </div>
+            </div>
+            <hr/>
         </div>
     )
 }
