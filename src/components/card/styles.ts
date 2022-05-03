@@ -1,8 +1,7 @@
 import styled from 'styled-components'
-import fundo from '../../assets/fundocard.png'
 export const Card = styled.div`
     display: inline-block;
-    background-color: #f5f5f5;
+    background-color: #fcedd4;
     height: 200px;
     width: 350px;
 `;

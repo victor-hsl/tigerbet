@@ -1,14 +1,14 @@
 import {Link} from 'react-router-dom'
 type Props = {
     name: string;
-    url: string;
+    id: number;
     urlLogo: string;
     sizeLogo: string;
-    active: boolean;
+    disabled: boolean;
 }
-const ListItem = ({name, url, urlLogo, sizeLogo, active} : Props) => {
+const ListItem = ({name, id, urlLogo, sizeLogo, disabled} : Props) => {
     return(
-        <Link to={url} className={`list-group-item list-group-item-action ${active ? 'active' : ''}`} >
+        <Link to={{pathname:`/league/${id}`}} className={`list-group-item list-group-item-action ${disabled ? 'disabled' : ''}`} >
             <img src={urlLogo} width={sizeLogo} /> {name}
         </Link>
     )
