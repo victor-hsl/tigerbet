@@ -10,12 +10,14 @@ const List = ({content} : Props) => {
             <div className="list-group-item bg-warning"><i className="bi bi-list-ul"></i> <b>Campeonatos</b></div>
             {content?.map((item, key)=>(
                 <ListItem 
+                    popular_name={item.nome_popular}
                     name={item.nome} 
                     id={item.campeonato_id} 
                     urlLogo={item.logo} 
                     sizeLogo={'30px'} 
+                    rodada={item.rodada_atual.rodada}
                     disabled={
-                        item.campeonato_id === 10 || item.campeonato_id === 2 ? true : false
+                        item.campeonato_id === 10 || item.campeonato_id === 2 ? false : true
                     }/>
             ))}
         </div>

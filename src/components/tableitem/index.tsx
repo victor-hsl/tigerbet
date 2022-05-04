@@ -1,35 +1,35 @@
-import {TableRow} from '../../types/TableRow'
+import {Posicao} from '../../types/Posicao'
 import './styles.css'
 type Props = {
-    data: TableRow;
+    data: Posicao;
 }
 const TableItem = ({data}: Props) => {
     return(
         <tr className="item">
-            <th scope="row" className="td">{data.position}</th>
-            <td><img src={data.icon} width="25px" height="25px"/> {data.team}</td>
-            <td>{data.points}</td>
-            <td>{data.wins}</td>
-            <td>{data.draws}</td>
-            <td>{data.loses}</td>
-            <td>{data.matchs}</td>
+            <th scope="row" className="td">{data.posicao}</th>
+            <td><img src={data.time.escudo} width="25px" height="25px"/> {data.time.nome_popular}</td>
+            <td>{data.pontos}</td>
+            <td>{data.vitorias}</td>
+            <td>{data.empates}</td>
+            <td>{data.derrotas}</td>
+            <td>{data.aproveitamento}</td>
             <td>
                 <div className="align-items-center">
                     <div className="">
-                    <div className={`result btn btn-${data.last5.m1 === 'w' ? 'success' : data.last5.m1 === 'l' ? 'danger' : 'secondary' } rounded-circle`}>
-                        <i className={`bi bi-${data.last5.m1 === 'w' ? 'check' : data.last5.m1 === 'l' ? 'x-lg' : 'dash-lg'}`}></i>
+                    <div className={`result btn btn-${data.ultimos_jogos[0] === 'v' ? 'success' : data.ultimos_jogos[0] === 'd' ? 'danger' : 'secondary' } rounded-circle`}>
+                        <i className={`bi bi-${data.ultimos_jogos[0] === 'v' ? 'check' : data.ultimos_jogos[0] === 'd' ? 'x-lg' : 'dash-lg'}`}></i>
                     </div>
-                    <div className={`btn btn-${data.last5.m2 === 'w' ? 'success' : data.last5.m2 === 'l' ? 'danger' : 'secondary' } rounded-circle`}>
-                        <i className={`bi bi-${data.last5.m2 === 'w' ? 'check-lg' : data.last5.m2 === 'l' ? 'x-lg' : 'dash-lg'}`}></i>
+                    <div className={`btn btn-${data.ultimos_jogos[1] === 'v' ? 'success' : data.ultimos_jogos[1] === 'd' ? 'danger' : 'secondary' } rounded-circle`}>
+                        <i className={`bi bi-${data.ultimos_jogos[1] === 'v' ? 'check-lg' : data.ultimos_jogos[1] === 'd' ? 'x-lg' : 'dash-lg'}`}></i>
                     </div>
-                    <div className={`btn btn-${data.last5.m3 === 'w' ? 'success' : data.last5.m3 === 'l' ? 'danger' : 'secondary' } rounded-circle`}>
-                        <i className={`bi bi-${data.last5.m3 === 'w' ? 'check-lg' : data.last5.m3 === 'l' ? 'x-lg' : 'dash-lg'}`}></i>
+                    <div className={`btn btn-${data.ultimos_jogos[2] === 'v' ? 'success' : data.ultimos_jogos[2] === 'd' ? 'danger' : 'secondary' } rounded-circle`}>
+                        <i className={`bi bi-${data.ultimos_jogos[2] === 'v' ? 'check-lg' : data.ultimos_jogos[2] === 'd' ? 'x-lg' : 'dash-lg'}`}></i>
                     </div>
-                    <div className={`btn btn-${data.last5.m4 === 'w' ? 'success' : data.last5.m4 === 'l' ? 'danger' : 'secondary' } rounded-circle`}>
-                        <i className={`bi bi-${data.last5.m4 === 'w' ? 'check-lg' : data.last5.m4 === 'l' ? 'x-lg' : 'dash-lg'}`}></i>
+                    <div className={`btn btn-${data.ultimos_jogos[3] === 'v' ? 'success' : data.ultimos_jogos[3] === 'd' ? 'danger' : 'secondary' } rounded-circle`}>
+                        <i className={`bi bi-${data.ultimos_jogos[3] === 'v' ? 'check-lg' : data.ultimos_jogos[3] === 'd' ? 'x-lg' : 'dash-lg'}`}></i>
                     </div>
-                    <div className={`btn btn-${data.last5.m5 === 'w' ? 'success' : data.last5.m5 === 'l' ? 'danger' : 'secondary' } rounded-circle`}>
-                        <i className={`bi bi-${data.last5.m5 === 'w' ? 'check-lg' : data.last5.m5 === 'l' ? 'x-lg' : 'dash-lg'}`}></i>
+                    <div className={`btn btn-${data.ultimos_jogos[4] === 'v' ? 'success' : data.ultimos_jogos[4] === 'd' ? 'danger' : 'secondary' } rounded-circle`}>
+                        <i className={`bi bi-${data.ultimos_jogos[4] === 'v' ? 'check-lg' : data.ultimos_jogos[4] === 'd' ? 'x-lg' : 'dash-lg'}`}></i>
                     </div>
                     </div>
                 </div>

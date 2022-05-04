@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
     baseURL: 'https://api.api-futebol.com.br/v1/',
-    headers: {'Authorization': 'Bearer test_1a0e15658d3c05990f8b00e108175a'}
+    headers: {'Authorization': 'Bearer live_d831f485550ad72dc3e7dfbddb4c10'}
 })
 
 export default api;
